@@ -2,12 +2,15 @@
 
 PeeringDB MCP — the peering ecosystem database.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 808+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
+| `search_networks` | Look up networks in PeeringDB by name or ASN. Returns peering policy (Open/Selective/Restrictive), traffic level, info type (Content/NSP/ISP/Enterprise), scope, and IPv4/IPv6 prefix counts. Provide a name query or an ASN. Keyless. |
+| `search_exchanges` | Find internet exchanges (IXes) in PeeringDB by name, city, or country (2-letter code). Returns the IX name, location, continent region, member network count, and website. Provide at least one of query/city/country. Keyless. |
+| `search_facilities` | Find colocation facilities (data centers) in PeeringDB by name, city, or country (2-letter code). Returns the facility name, location, network count, street address, and website. Provide at least one of query/city/country. Keyless. |
 
 ## Quick Start
 
@@ -23,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 808+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +50,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
