@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-peeringdb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "PeeringDB MCP — the peering ecosystem database.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-peeringdb": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "peeringdb"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-peeringdb"
+    "url": "git+https://github.com/pipeworx-io/mcp-peeringdb.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-679bfce344a4f0732482e6f93091b7710089cf031e8d746cdbba7b261c9433ad",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
