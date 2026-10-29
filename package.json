@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-peeringdb",
-  "version": "0.1.2",
-  "description": "PeeringDB MCP — the peering ecosystem database.",
+  "version": "0.2.0",
+  "description": "PeeringDB MCP — the peering ecosystem database. Look up networks by name or ASN, find internet exchanges (IXes) and colocation facilities by name/city/country. Keyless for public reads.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-peeringdb": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "peeringdb"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-peeringdb.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/peeringdb",
   "pipeworx": {
-    "sourceHash": "v1-d6fb4ae276b1fac12f5a5d0eb71697cfa7588fb1cc92b6623f030c6664565c90",
-    "sourceCommit": "4d51421bd010ad9a322c2245b70b401604912eff"
+    "mode": "gateway",
+    "slug": "peeringdb",
+    "gatewaySlug": "peeringdb",
+    "sourceHash": "v1-fbdaf7eb502cb5276507b5130ccb9acfb59f82210d9cdd6642563039c951f5eb",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }

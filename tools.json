@@ -1,0 +1,73 @@
+[
+  {
+    "name": "search_networks",
+    "description": "Look up networks in PeeringDB by name or ASN. Returns peering policy (Open/Selective/Restrictive), traffic level, info type (Content/NSP/ISP/Enterprise), scope, and IPv4/IPv6 prefix counts. Provide a name query or an ASN. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Network name (matches names containing this text)."
+        },
+        "asn": {
+          "type": "number",
+          "description": "Autonomous System Number, e.g. 15169 for Google."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (default 20, max 100)."
+        }
+      }
+    }
+  },
+  {
+    "name": "search_exchanges",
+    "description": "Find internet exchanges (IXes) in PeeringDB by name, city, or country (2-letter code). Returns the IX name, location, continent region, member network count, and website. Provide at least one of query/city/country. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "IX name (matches names containing this text)."
+        },
+        "city": {
+          "type": "string",
+          "description": "City name."
+        },
+        "country": {
+          "type": "string",
+          "description": "2-letter ISO country code, e.g. US, DE, GB."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (default 20)."
+        }
+      }
+    }
+  },
+  {
+    "name": "search_facilities",
+    "description": "Find colocation facilities (data centers) in PeeringDB by name, city, or country (2-letter code). Returns the facility name, location, network count, street address, and website. Provide at least one of query/city/country. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Facility name (matches names containing this text)."
+        },
+        "city": {
+          "type": "string",
+          "description": "City name."
+        },
+        "country": {
+          "type": "string",
+          "description": "2-letter ISO country code, e.g. US, DE, GB."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results (default 20)."
+        }
+      }
+    }
+  }
+]
