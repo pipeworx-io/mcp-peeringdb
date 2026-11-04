@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-peeringdb",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PeeringDB MCP — the peering ecosystem database. Look up networks by name or ASN, find internet exchanges (IXes) and colocation facilities by name/city/country. Keyless for public reads.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "peeringdb",
     "gatewaySlug": "peeringdb",
-    "sourceHash": "v1-fbdaf7eb502cb5276507b5130ccb9acfb59f82210d9cdd6642563039c951f5eb",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-94332862a173f3ad6b03566c519e636070ee98b409c08429b51d612d983ec9f6",
+    "sourceCommit": "243a06a6ca2d3b6075325f3b66a1468d0a2eb603"
   }
 }
